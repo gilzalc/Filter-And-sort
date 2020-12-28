@@ -7,10 +7,7 @@ public class FilterName extends Filter {
     private final BiPredicate<String, String> predictor;
 
     public FilterName(String filterString, int hashTagIndex,
-                      BiPredicate<String, String> predictor) {
-        super(filterString);
-        this.predictor = (hasNot) ? predictor.negate() : predictor;
-        this.stringVal = (this.hasNot)?
+                      
                 filterString.substring(hashTagIndex+1,
                         filterString.length()-NOT_LENGTH):
                 filterString.substring(hashTagIndex+1);
